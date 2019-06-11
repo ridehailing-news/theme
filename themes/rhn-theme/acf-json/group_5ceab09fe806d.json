@@ -32,7 +32,7 @@
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
-                                "class": "",
+                                "class": "rhn-article__paragraph",
                                 "id": ""
                             },
                             "default_value": "",
@@ -51,7 +51,7 @@
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
-                                "class": "",
+                                "class": "rhn-article__marginal",
                                 "id": ""
                             },
                             "default_value": "",
@@ -107,6 +107,21 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        },
+                        {
+                            "key": "field_5d00072d7ec2e",
+                            "label": "Quelle",
+                            "name": "rhn_quote_source",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
                         }
                     ],
                     "min": "",
@@ -242,21 +257,6 @@
                                         "id": ""
                                     },
                                     "return_format": "array"
-                                },
-                                {
-                                    "key": "field_5cefc2880212f",
-                                    "label": "Autor\/Urheber",
-                                    "name": "rhn_slider_image_author",
-                                    "type": "link",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "50",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array"
                                 }
                             ]
                         },
@@ -341,26 +341,40 @@
                             "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
                             "return_format": "array"
-                        },
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5d0007a9c0c4d": {
+                    "key": "layout_5d0007a9c0c4d",
+                    "name": "rhn_list",
+                    "label": "Liste",
+                    "display": "block",
+                    "sub_fields": [
                         {
-                            "key": "field_5cefc2650212e",
-                            "label": "Autor\/Urheber",
-                            "name": "rhn_image_author",
-                            "type": "link",
+                            "key": "field_5d0007fdc0c50",
+                            "label": "Liste",
+                            "name": "rhn_list_list",
+                            "type": "wysiwyg",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "50",
-                                "class": "",
+                                "width": "",
+                                "class": "rhn-list",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "basic",
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -391,5 +405,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1559219094
+    "modified": 1560283297
 }
