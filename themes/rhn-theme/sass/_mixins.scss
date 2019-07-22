@@ -1,0 +1,130 @@
+// Mixins
+
+@mixin flex($args...) {
+
+  @each $name, $value in keywords($args) {
+    .fc-r-#{$name} {
+      display: flex;
+      flex-direction: row;
+      justify-content: $value;
+    }
+
+    .fc-c-#{$name} {
+      display: flex;
+      flex-direction: column;
+      justify-content: $value;
+    }
+  }
+}
+
+@mixin flex-basis($args...) {
+
+  @each $name, $value in keywords($args) {
+    .fi-b-#{$name} {
+      flex-basis: $value;
+    }
+  }
+}
+
+@mixin padding($args...) {
+
+  @each $name, $value in keywords($args) {
+    .pt-#{$name} {
+      padding-top: $value;
+    }
+
+    .pr-#{$name} {
+      padding-right: $value;
+    }
+
+    .pb-#{$name} {
+      padding-bottom: $value;
+    }
+
+    .pl-#{$name} {
+      padding-left: $value;
+    }
+
+    .plr-#{$name} {
+      padding-left: $value;
+      padding-right: $value;
+    }
+
+    .ptb-#{$name} {
+      padding-top: $value;
+      padding-bottom: $value;
+    }
+
+    .p-#{$name} {
+      padding: $value;
+    }
+  }
+}
+
+@mixin text($args...) {
+
+  @each $name, $value in keywords($args) {
+
+    .text-reg-#{$name} {
+      font: {
+        weight: 400;
+        font-style: inherit;
+        size: $value;
+      }
+    }
+
+    .text-ita-#{$name} {
+      font: {
+        weight: 400;
+        font-style: italic;
+        size: $value;
+      }
+    }
+
+    .text-bld-#{$name} {
+      font: {
+        weight: 400;
+        font-style: inherit;
+        size: $value;
+      }
+    }
+
+  }
+
+}
+
+// Includes
+
+@include flex(
+  $sb: space-between,
+  $sa: space-around,
+  $fs: flex-start,
+  $fe: flex-end,
+  $c: center,
+  $s: start,
+  $e: end
+);
+
+@include flex-basis(
+  $tel18: 5.56%,
+  $tel18-2: 11.11%,
+  $tel6: 16.67%,
+  $tel3: 33.33%,
+  $half: 50%,
+  $tel3-2: 66.67%,
+  $tel6-5: 83.32%,
+  $full: 100%
+);
+
+@include padding(
+  $small: 10px,
+  $normal: 20px,
+  $big: 40px
+);
+
+@include text(
+  $small: 14px,
+  $normal: 16px,
+  $subhead: 24px,
+  $head: 34px
+);
