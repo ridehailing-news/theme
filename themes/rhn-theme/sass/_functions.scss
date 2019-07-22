@@ -1,0 +1,9 @@
+@function space($val) {
+  @if $val == 'small' {
+    @return 10px;
+  } @else if $val == 'normal' {
+    @return 20px;
+  } @else if $val == 'big' {
+    @return 40px;
+  }
+}

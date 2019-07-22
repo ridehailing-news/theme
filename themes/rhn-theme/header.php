@@ -1,52 +1,74 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since 1.0.0
- */
-?><!doctype html>
-<html <?php language_attributes(); ?>>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="profile" href="https://gmpg.org/xfn/11" />
-	<?php wp_head(); ?>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuex"></script>
+
+  <script src="<?php bloginfo('template_directory'); ?>/js/functions.js"></script>
+
+  <title><?php the_title(); ?></title>
+
+  <?php wp_head(); ?>
+
+  <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentynineteen' ); ?></a>
+<body>
+  <header id="main-menu">
+    <div class="rhn-menu_container">
+      <div class="rhn-wrapper fc-r-sb 
+                  plr-normal ptb-small">
+        <div id="rhn-menu__logo" 
+             class="fi-b-tel18-2">
+          <a href="<?php home_url(); ?>" title="Link to Homepage">
+            <?php include(get_template_directory() . '/assets/logo.php'); ?>
+          </a>
+        </div>
+        <div class="rhn-menu__hamburger
+                    fi-b-tel18" 
+             v-on:click="show = !show">
+          <div class="rhn-menu__hamburger--container"
+               :class="{ 'rhn-menu__hamburger--active' : show }"></div>
+        </div>
+      </div>
+    </div>
 
-		<header id="masthead" class="<?php echo is_singular() && twentynineteen_can_show_post_thumbnail() ? 'site-header featured-image' : 'site-header'; ?>">
+    <transition name="fold-menu">
+    <div id="rhn-submenu" 
+        class="rhn-submenu__dropdown
+               fc-r-sb"
+        v-if="show">
 
-			<div class="site-branding-container">
-				<?php get_template_part( 'template-parts/header/site', 'branding' ); ?>
-			</div><!-- .layout-wrap -->
+      <div class="rhn-wrapper 
+                  fc-r-sb plr-normal ptb-big">
 
-			<?php if ( is_singular() && twentynineteen_can_show_post_thumbnail() ) : ?>
-				<div class="site-featured-image">
-					<?php
-						twentynineteen_post_thumbnail();
-						the_post();
-						$discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null;
+        <nav class="rhn-nav__company--main 
+                    fi-b-tel6 pr-small">
+          <?php wp_nav_menu( $args = array( 
+            'menu' => 'header_menu',
+            'theme_location' => 'header_menu',
+            'menu_class' => 'header_menu',
+          ) ) ?>
+        </nav>
 
-						$classes = 'entry-header';
-					if ( ! empty( $discussion ) && absint( $discussion->responses ) > 0 ) {
-						$classes = 'entry-header has-discussion';
-					}
-					?>
-					<div class="<?php echo $classes; ?>">
-						<?php get_template_part( 'template-parts/header/entry', 'header' ); ?>
-					</div><!-- .entry-header -->
-					<?php rewind_posts(); ?>
-				</div>
-			<?php endif; ?>
-		</header><!-- #masthead -->
+        <nav class="rhn-nav__company--sub 
+                    fi-b-tel6-5 pl-small">
+          <?php wp_nav_menu( $args = array( 
+            'menu' => 'company_menu',
+            'theme_location' => 'company_menu',
+            'menu_class' => 'company_menu fc-r-fs',
+          ) ) ?>
+        </nav>
+        
+      </div>
 
-	<div id="content" class="site-content">
+    </div>
+    </transition>
+
+  </header>

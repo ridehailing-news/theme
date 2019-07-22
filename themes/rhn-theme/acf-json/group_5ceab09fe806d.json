@@ -1,0 +1,409 @@
+{
+    "key": "group_5ceab09fe806d",
+    "title": "Artikelmodule",
+    "fields": [
+        {
+            "key": "field_5ceab0a68d828",
+            "label": "Artikel Module",
+            "name": "rhn_article_modules",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "5ceab0c62c1d6": {
+                    "key": "5ceab0c62c1d6",
+                    "name": "rhn_article_paragraph",
+                    "label": "Absatz",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ceab1028d829",
+                            "label": "Text",
+                            "name": "rhn_article_paragraph_content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "rhn-article__paragraph",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5ceab1418d82a",
+                            "label": "Marginalie",
+                            "name": "rhn_article_paragraph_marginal",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "rhn-article__marginal",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cefbadd7d279": {
+                    "key": "layout_5cefbadd7d279",
+                    "name": "rhn_quote",
+                    "label": "Zitat",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cefbb007d27a",
+                            "label": "Zitat",
+                            "name": "rhn_quote_content",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 6,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_5cefbb167d27b",
+                            "label": "Autor",
+                            "name": "rhn_quote_author",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5d00072d7ec2e",
+                            "label": "Quelle",
+                            "name": "rhn_quote_source",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cefbc018953e": {
+                    "key": "layout_5cefbc018953e",
+                    "name": "rhn_essence",
+                    "label": "Textessenz",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cefbc468953f",
+                            "label": "Titel",
+                            "name": "rhn_essence_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5cefbcc489540",
+                            "label": "Inhalt",
+                            "name": "rhn_essence_content",
+                            "type": "textarea",
+                            "instructions": "Inhalt der Textessenz. Auf 250 Zeichen begrenzt.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": 250,
+                            "rows": "",
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cefbd7a81cd9": {
+                    "key": "layout_5cefbd7a81cd9",
+                    "name": "rhn_slider",
+                    "label": "Slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cefbda181cda",
+                            "label": "Bilder",
+                            "name": "rhn_slider_repeater",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "field_5cefbdc381cdb",
+                            "min": 1,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "Bild hinzufügen",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5cefbdc381cdb",
+                                    "label": "Bild",
+                                    "name": "rhn_slider_image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "url",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_5cefbdf481cdc",
+                                    "label": "Bildbeschreibung",
+                                    "name": "rhn_slider_image_description",
+                                    "type": "textarea",
+                                    "instructions": "Max. 300 Zeichen.",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "maxlength": 300,
+                                    "rows": 6,
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_5cefbead81cde",
+                                    "label": "Bildquelle",
+                                    "name": "rhn_slider_image_source",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_5cefbfbbe9b5c",
+                            "label": "Beschreibung",
+                            "name": "rhn_slider_description",
+                            "type": "textarea",
+                            "instructions": "Max. 150 Zeichen.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": 150,
+                            "rows": 3,
+                            "new_lines": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cefc11702128": {
+                    "key": "layout_5cefc11702128",
+                    "name": "rhn_image",
+                    "label": "Bild",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cefc13e02129",
+                            "label": "Bild",
+                            "name": "rhn_image_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5cefc1680212a",
+                            "label": "Beschreibung",
+                            "name": "rhn_image_description",
+                            "type": "textarea",
+                            "instructions": "Max. 300 Zeichen",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 6,
+                            "new_lines": ""
+                        },
+                        {
+                            "key": "field_5cefc1ca0212c",
+                            "label": "BIldquelle",
+                            "name": "rhn_image_source",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5d0007a9c0c4d": {
+                    "key": "layout_5d0007a9c0c4d",
+                    "name": "rhn_list",
+                    "label": "Liste",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5d0007fdc0c50",
+                            "label": "Liste",
+                            "name": "rhn_list_list",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "rhn-list",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "visual",
+                            "toolbar": "basic",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Artikelmodul hinzufügen",
+            "min": 1,
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1560283297
+}
