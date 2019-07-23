@@ -32,4 +32,11 @@ body {
   box-sizing: border-box;
 }
 
+.customize-support #main-menu {
+  top: 32px;
+}
+
 @import './header.scss';
+@import './main.scss';
+@import './article.scss';
+@import './footer.scss';

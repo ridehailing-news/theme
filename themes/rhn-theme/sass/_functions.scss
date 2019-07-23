@@ -5,5 +5,7 @@
     @return 20px;
   } @else if $val == 'big' {
     @return 40px;
+  } @else if $val == 'huge' {
+    @return 80px;
   }
 }

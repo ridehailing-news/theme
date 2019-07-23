@@ -22,16 +22,16 @@
 <body>
   <header id="main-menu">
     <div class="rhn-menu_container">
-      <div class="rhn-wrapper fc-r-sb 
+      <div class="rhn-wrapper f-r-sb 
                   plr-normal ptb-small">
         <div id="rhn-menu__logo" 
-             class="fi-b-tel18-2">
+             class="f-b-tel18-2">
           <a href="<?php home_url(); ?>" title="Link to Homepage">
             <?php include(get_template_directory() . '/assets/logo.php'); ?>
           </a>
         </div>
         <div class="rhn-menu__hamburger
-                    fi-b-tel18" 
+                    f-b-tel18" 
              v-on:click="show = !show">
           <div class="rhn-menu__hamburger--container"
                :class="{ 'rhn-menu__hamburger--active' : show }"></div>
@@ -42,14 +42,14 @@
     <transition name="fold-menu">
     <div id="rhn-submenu" 
         class="rhn-submenu__dropdown
-               fc-r-sb"
+               f-r-sb"
         v-if="show">
 
       <div class="rhn-wrapper 
-                  fc-r-sb plr-normal ptb-big">
+                  f-r-sb plr-normal ptb-big">
 
         <nav class="rhn-nav__company--main 
-                    fi-b-tel6 pr-small">
+                    f-b-tel6 pr-small">
           <?php wp_nav_menu( $args = array( 
             'menu' => 'header_menu',
             'theme_location' => 'header_menu',
@@ -58,11 +58,11 @@
         </nav>
 
         <nav class="rhn-nav__company--sub 
-                    fi-b-tel6-5 pl-small">
+                    f-b-tel6-5 pl-small">
           <?php wp_nav_menu( $args = array( 
             'menu' => 'company_menu',
             'theme_location' => 'company_menu',
-            'menu_class' => 'company_menu fc-r-fs',
+            'menu_class' => 'company_menu f-r-fs',
           ) ) ?>
         </nav>
         
@@ -72,3 +72,5 @@
     </transition>
 
   </header>
+
+  <main id="main-wrapper">

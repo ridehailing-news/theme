@@ -3,13 +3,13 @@
 @mixin flex($args...) {
 
   @each $name, $value in keywords($args) {
-    .fc-r-#{$name} {
+    .f-r-#{$name} {
       display: flex;
       flex-direction: row;
       justify-content: $value;
     }
 
-    .fc-c-#{$name} {
+    .f-c-#{$name} {
       display: flex;
       flex-direction: column;
       justify-content: $value;
@@ -20,7 +20,7 @@
 @mixin flex-basis($args...) {
 
   @each $name, $value in keywords($args) {
-    .fi-b-#{$name} {
+    .f-b-#{$name} {
       flex-basis: $value;
     }
   }

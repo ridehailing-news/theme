@@ -7,7 +7,7 @@ var mainMenu = new Vue({
     let companyMenuItems = document.getElementsByClassName('rhn-company-menu-item');
     
     Array.from(companyMenuItems).map(item => {
-      item.classList.add('fi-b-tel6');
+      item.classList.add('f-b-tel6');
       Array.from(item.children).map(child => {
         if (child.tagName == 'A' && child.hasAttribute('title')) {
           child.classList.add('text-bld-subhead', 'pb-small', 'rhn-company-menu__headline');
