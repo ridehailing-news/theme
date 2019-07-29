@@ -93,6 +93,41 @@
 
 }
 
+@mixin font($type: normal, $color: $blue, $style: normal) {
+  font-family: 'Fira Sans', sans-serif;
+  color: $color;
+
+  @if $type == 'headline' {
+    font: {
+      size: 34px;
+      weight: 700;
+      style: $style;
+    }
+    line-height: 44px;
+    letter-spacing: 0.03em;
+  } @else if $type == 'subline' {
+    font: {
+      size: 16px;
+      weight: 700;
+      style: $style;
+    }
+    line-height: 22px;
+  } @else if $type == 'normal' {
+    font: {
+      size: 16px;
+      weight: 400;
+      style: $style;
+    }
+    line-height: 22px;
+  } @else if $type == 'small' {
+    font: {
+      size: 14px;
+      weight: 400;
+      style: $style;
+    }
+  }
+}
+
 // Includes
 
 @include flex(

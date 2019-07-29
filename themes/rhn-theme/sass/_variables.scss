@@ -1,4 +1,13 @@
 // Colors
+$lime-10: rgba(#7dff7d, .1);
+$lime-20: rgba(#7dff7d, .2);
+$lime-30: rgba(#7dff7d, .3);
+$lime-40: rgba(#7dff7d, .4);
+$lime-50: rgba(#7dff7d, .5);
+$lime-60: rgba(#7dff7d, .6);
+$lime-70: rgba(#7dff7d, .7);
+$lime-80: rgba(#7dff7d, .8);
+$lime-90: rgba(#7dff7d, .9);
 $lime: #7dff7d;
 
 // Blue
@@ -13,6 +22,19 @@ $blue-80: rgba(#004e64, .8);
 $blue-90: rgba(#004e64, .9);
 $blue: #004e64;
 
+// Shade
+$shade-10: rgba(#171717, .1);
+$shade-20: rgba(#171717, .2);
+$shade-30: rgba(#171717, .3);
+$shade-40: rgba(#171717, .4);
+$shade-50: rgba(#171717, .5);
+$shade-60: rgba(#171717, .6);
+$shade-70: rgba(#171717, .7);
+$shade-80: rgba(#171717, .8);
+$shade-90: rgba(#171717, .9);
+$shade: #171717;
+
+// White
 $white-10: rgba(#f3f3f3, .1);
 $white-20: rgba(#f3f3f3, .2);
 $white-30: rgba(#f3f3f3, .3);
@@ -24,7 +46,13 @@ $white-80: rgba(#f3f3f3, .8);
 $white-90: rgba(#f3f3f3, .9);
 $white: #f3f3f3;
 
+// Links
+$visited: #4f2196;
+
 // Transitions
 $fast: all .15s;
 $normal: all .3s;
 $slow: all .4s;
+
+$submenuHeight: 250px;
+$titleHeight: calc(#{$submenuHeight} + 150px);

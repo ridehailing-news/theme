@@ -7,8 +7,8 @@
 
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700&display=swap" rel="stylesheet">
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/vuex"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <script src="<?php bloginfo('template_directory'); ?>/assets/vue/vue.js"></script>
 
   <script src="<?php bloginfo('template_directory'); ?>/js/functions.js"></script>
 
