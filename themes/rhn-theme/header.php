@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,400i,700&display=swap" rel="stylesheet">
 
   <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
   <script src="<?php bloginfo('template_directory'); ?>/assets/vue/vue.js"></script>
-
   <script src="<?php bloginfo('template_directory'); ?>/js/functions.js"></script>
 
-  <title><?php the_title(); ?></title>
+  <?php 
+    $wp_page_title = wp_title('', false); 
+    $page_title = ($wp_page_title) 
+      ? $wp_page_title . ' | Ridehailing News'
+      : 'Ridehailing News';
+  ?>
+  
+  <title><?php echo $page_title ?></title>
 
   <?php wp_head(); ?>
 
@@ -26,16 +32,16 @@
                   plr-normal ptb-small">
         <div id="rhn-menu__logo" 
              class="f-b-tel18-2">
-          <a href="<?php home_url(); ?>" title="Link to Homepage">
+          <a href="<?php echo home_url(); ?>" title="Link to Homepage">
             <?php include(get_template_directory() . '/assets/logo.php'); ?>
           </a>
         </div>
-        <div class="rhn-menu__hamburger
+        <!-- <div class="rhn-menu__hamburger
                     f-b-tel18" 
              v-on:click="show = !show">
           <div class="rhn-menu__hamburger--container"
                :class="{ 'rhn-menu__hamburger--active' : show }"></div>
-        </div>
+        </div> -->
       </div>
     </div>
 

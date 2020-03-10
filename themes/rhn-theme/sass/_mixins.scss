@@ -22,6 +22,7 @@
   @each $name, $value in keywords($args) {
     .f-b-#{$name} {
       flex-basis: $value;
+      flex-shrink: 0;
     }
   }
 }
@@ -61,9 +62,55 @@
   }
 }
 
+@mixin margin($args...) {
+
+  @each $name, $value in keywords($args) {
+    .mt-#{$name} {
+      margin-top: $value;
+    }
+
+    .mr-#{$name} {
+      margin-right: $value;
+    }
+
+    .mb-#{$name} {
+      margin-bottom: $value;
+    }
+
+    .ml-#{$name} {
+      margin-left: $value;
+    }
+
+    .mlr-#{$name} {
+      margin-left: $value;
+      margin-right: $value;
+    }
+
+    .mtb-#{$name} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+
+    .m-#{$name} {
+      margin: $value;
+    }
+  }
+}
+
 @mixin text($args...) {
 
   @each $name, $value in keywords($args) {
+
+    .text-lig-#{$name} {
+      font: {
+        weight: 300;
+        font-style: inherit;
+        size: $value;
+      }
+      
+      line-height: calc(#{$value} * 1.6);
+      letter-spacing: 0.03em;
+    }
 
     .text-reg-#{$name} {
       font: {
@@ -71,26 +118,33 @@
         font-style: inherit;
         size: $value;
       }
+      
+      line-height: calc(#{$value} * 1.6);
+      letter-spacing: 0.03em;
     }
 
     .text-ita-#{$name} {
       font: {
         weight: 400;
-        font-style: italic;
+        style: italic;
         size: $value;
       }
+
+      line-height: calc(#{$value} * 1.6);
+      letter-spacing: 0.03em;
     }
 
     .text-bld-#{$name} {
       font: {
-        weight: 400;
+        weight: 700;
         font-style: inherit;
         size: $value;
       }
+
+      line-height: calc(#{$value} * 1.6);
+      letter-spacing: 0.03em;
     }
-
   }
-
 }
 
 @mixin font($type: normal, $color: $blue, $style: normal) {
@@ -146,12 +200,18 @@
   $tel6: 16.67%,
   $tel3: 33.33%,
   $half: 50%,
-  $tel3-2: 66.67%,
+  $tel2-3: 66.67%,
   $tel6-5: 83.32%,
   $full: 100%
 );
 
 @include padding(
+  $small: 10px,
+  $normal: 20px,
+  $big: 40px
+);
+
+@include margin(
   $small: 10px,
   $normal: 20px,
   $big: 40px

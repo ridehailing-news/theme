@@ -121,7 +121,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "return_format": "url"
                         }
                     ],
                     "min": "",
@@ -379,6 +379,32 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5e4a7da85c2da": {
+                    "key": "layout_5e4a7da85c2da",
+                    "name": "rhn_embed",
+                    "label": "Embed",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e4a7db65c2db",
+                            "label": "Medien einbetten",
+                            "name": "rhn_embed_embed",
+                            "type": "oembed",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "width": "",
+                            "height": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Artikelmodul hinzufügen",
@@ -405,5 +431,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1560283297
+    "modified": 1581943203
 }

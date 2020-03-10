@@ -47,12 +47,20 @@ $white-90: rgba(#f3f3f3, .9);
 $white: #f3f3f3;
 
 // Links
-$visited: #4f2196;
+$visited: $blue-30;
 
 // Transitions
 $fast: all .15s;
 $normal: all .3s;
 $slow: all .4s;
 
+// Breakpoints
+$xsm: 320px;
+$sm: 768px;
+$md: 1056px;
+$lg: 1312px;
+$xlg: 1584px;
+
+//Customs
 $submenuHeight: 250px;
 $titleHeight: calc(#{$submenuHeight} + 150px);
