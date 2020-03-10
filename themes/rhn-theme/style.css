@@ -1537,7 +1537,7 @@ article {
   background-color: #004e64;
 }
 /* line 266, sass/_footer.scss */
-.section__suggestion .suggestion-article .suggestion-article--container:hover a span {
+.section__suggestion .suggestion-article .suggestion-article--container:hover a div {
   color: #7dff7d;
 }
 /* line 273, sass/_footer.scss */
