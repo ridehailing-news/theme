@@ -28,11 +28,13 @@ jobs:
       run: |
         mkdir -p ~/.ssh
         ssh-keyscan access778121753.webspace-data.io >> ~/.ssh/known_hosts
-        ls -a ~/.ssh/
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" >> ~/.ssh/id_rsa
         ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-        ssh-add -l <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+        ssh-add -l ~/.ssh/id_rsa
           
-    - name: Deploy to ridehailing-news.com 
+    - name: Deploy to ridehailing-news.com
+      env:
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock 
       run: |
         git remote add live ssh://u96873591@access778121753.webspace-data.io/homepages/46/d778121753/htdocs/repositories/live.git
         git push live master -f
