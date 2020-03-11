@@ -21,8 +21,20 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    
+    - name: Setup SSH Keys and known_hosts
+      env:
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+        ssh-add - <<< "${{ secrets.SSH_PRIVATE_KEY }}"
+          
     - name: Deploy to ridehailing-news.com 
+      env:
+        SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: | 
         git remote add live ssh://u96873591@access778121753.webspace-data.io/homepages/46/d778121753/htdocs/repositories/live.git
-        git remote --verbose
+        git push live master -f
     
