@@ -25,7 +25,6 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: Deploy to ridehailing-news.com
       run: |
+        git remote -V
         git remote add live ssh://u96873591@access778121753.webspace-data.io/homepages/46/d778121753/htdocs/repositories/live.git
-        git add .
-        git commit -m "Deploy"
         git push live master -f
