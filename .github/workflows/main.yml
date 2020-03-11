@@ -22,5 +22,7 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
     - name: Deploy to ridehailing-news.com 
-      run: git remote add live ssh://u96873591@access778121753.webspace-data.io/homepages/46/d778121753/htdocs/repositories/live.git
+      run: | 
+        git remote add live ssh://u96873591@access778121753.webspace-data.io/homepages/46/d778121753/htdocs/repositories/live.git
+        git remote --verbose
     
