@@ -33,7 +33,7 @@ jobs:
           AddKeysToAgent yes
           UseKeychain yes
           IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
-        ssh-add -l "${{ secrets.SSH_PRIVATE_KEY }}"
+        ssh-add -l ${{ secrets.SSH_PRIVATE_KEY }}
         ssh-keyscan access778121753.webspace-data.io >> ~/.ssh/known_hosts
         ssh-agent -a $SSH_AUTH_SOCK > /dev/null
           
