@@ -27,10 +27,15 @@ jobs:
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       run: |
         mkdir -p ~/.ssh
-        ssh-keyscan access778121753.webspace-data.io >> ~/.ssh/known_hosts
         echo "${{ secrets.SSH_PRIVATE_KEY }}" >> ~/.ssh/id_rsa
+        eval "$(ssh-agent -s)"
+        echo "Host *
+          AddKeysToAgent yes
+          UseKeychain yes
+          IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
+        ssh-add -K ~/.ssh/id_rsa
+        ssh-keyscan access778121753.webspace-data.io >> ~/.ssh/known_hosts
         ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-        ssh-add -l ~/.ssh/id_rsa
           
     - name: Deploy to ridehailing-news.com
       env:
