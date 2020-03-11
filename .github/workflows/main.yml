@@ -34,7 +34,8 @@ jobs:
     - name: Deploy to ridehailing-news.com 
       env:
         SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-      run: | 
+      run: |
+        export $SSH_AUTH_SOCK 
         git remote add live ssh://u96873591@access778121753.webspace-data.io/homepages/46/d778121753/htdocs/repositories/live.git
         git push live master -f
     
